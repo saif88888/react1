@@ -63,7 +63,7 @@ class Form extends Component {
             placeholder="FirstName..."
           />
           <br />
-          <label>email :</label>{" "}
+          <label>Email :</label>{" "}
           <input
             type="text"
             value={this.state.lastName}
