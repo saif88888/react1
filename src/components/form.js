@@ -9,7 +9,6 @@ class Form extends Component {
       firstName: "",
       email: "",
       password: "",
-      gender: "",
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -30,12 +29,6 @@ class Form extends Component {
     });
   };
 
-  genderhandler = (event) => {
-    this.setState({
-      gender: event.target.value,
-    });
-  };
-
   handleSubmit = (event) => {
     alert(
       `${this.state.firstName} ${this.state.lastName}  Registered Successfully !!!!`
@@ -45,7 +38,6 @@ class Form extends Component {
       firstName: "",
       lastName: "",
       password: "",
-      gender: "",
     });
     event.preventDefault();
   };
@@ -78,13 +70,6 @@ class Form extends Component {
             onChange={this.passwordhandler}
             placeholder="Password..."
           />
-          <br />
-          <label>Gender :</label>
-          <select onChange={this.genderhandler} defaultValue="Select Gender">
-            <option defaultValue>Select Gender</option>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-          </select>
           <br />
           <input type="submit" value="Submit" />
         </form>
